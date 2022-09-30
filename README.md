@@ -1,10 +1,39 @@
 # Database of modular forms of Noncongruence Subgroups of PSL(2,&#8484;)
 ## Development status
 ### Genus zero
-The database currently contains 77 representatives of genus zero noncongruence subgroups. For each of these subgroups we have rigorously computed q-expansions of the Hauptmodul
+
+| Index  | Amount of computed passports / Total amount of passports |
+| ------------- | ------------- |
+| 7 | 3/3 |
+| 8 | 1/1 |
+| 9 | 9/9 |
+| 10 | 9/9 |
+| 11 | 6/6 |
+| 12 | 23/27 |
+| 13 | 22/23 |
+| 14 | 21/29 |
+| 15 | 54/62 |
+| 16 | 36/65 |
+| 17 | 16/35 |
+
+The database currently contains 200 representatives of genus zero noncongruence subgroups. For each of these subgroups we have rigorously computed q-expansions of the Hauptmodul
 and all modular forms and cuspforms up to and including weight 6 up to the 50th order. We also include numerical expressions to construct the spaces of Eisenstein series to around 1000 digits precision as well as floating point expressions of the q-expansions, limited to 100 digits per coefficients to save storage space.
+
 ### Genus one
-The database currently contains 17 representatives of genus one noncongruence subgroups. For each of these subgroups we have computed q-expansions of the Hauptmodul
+
+| Index  | Amount of computed passports / Total amount of passports |
+| ------------- | ------------- |
+| 9 | 1/1 |
+| 10 | 1/1 |
+| 11 | 0/0 |
+| 12 | 2/3 |
+| 13 | 1/1 |
+| 14 | 1/2 |
+| 15 | 6/9 |
+| 16 | 7/9 |
+| 17 | 1/2 |
+
+The database currently contains 20 representatives of genus one noncongruence subgroups. For each of these subgroups we have computed q-expansions of the Hauptmodul
 and all modular forms and cuspforms up to and including weight 6. The order of the q-expansions is not fixed and depends on the amount of coefficients that could be recognized using the LLL algorithm. We also include numerical expressions to construct the spaces of Eisenstein series to around 1000 digits precision as well as floating point expressions of the q-expansions, limited to 100 digits per coefficients to save storage space. Note that we have not yet computed the curves for genus one.
 ## Requirements
 Loading the database requires [SageMath](https://www.sagemath.org/) version 9.2, although other versions of Sage might work as well.
