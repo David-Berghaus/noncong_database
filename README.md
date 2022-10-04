@@ -17,7 +17,7 @@
 | 17 | 16/35 |
 
 The database currently contains 200 representatives of genus zero noncongruence subgroups. For each of these subgroups we have rigorously computed q-expansions of the Hauptmodul
-and all modular forms and cuspforms up to and including weight 6 up to the 50th order. We also include numerical expressions to construct the spaces of Eisenstein series to around 1000 digits precision as well as floating point expressions of the q-expansions, limited to 100 digits per coefficients to save storage space.
+and all modular forms and cuspforms up to and including weight 6. We also include numerical expressions to construct the spaces of Eisenstein series to around 1500 digits precision.
 
 ### Genus one
 
@@ -34,9 +34,11 @@ and all modular forms and cuspforms up to and including weight 6 up to the 50th 
 | 17 | 1/2 |
 
 The database currently contains 20 representatives of genus one noncongruence subgroups. For each of these subgroups we have computed q-expansions of the Hauptmodul
-and all modular forms and cuspforms up to and including weight 6. The order of the q-expansions is not fixed and depends on the amount of coefficients that could be recognized using the LLL algorithm. We also include numerical expressions to construct the spaces of Eisenstein series to around 1000 digits precision as well as floating point expressions of the q-expansions, limited to 100 digits per coefficients to save storage space. Note that we have not yet computed the curves for genus one.
+and all modular forms and cuspforms up to and including weight 6. We also include numerical expressions to construct the spaces of Eisenstein series to around 1500 digits precision.
+
 ## Requirements
-Loading the database requires [SageMath](https://www.sagemath.org/) version 9.2, although other versions of Sage might work as well.
+The database can be loaded by running [Sage](https://www.sagemath.org/) scripts that were generated for the syntax of Sage version 9.2 (and hopefully work for the versions that are yet to be released as well). Additionally, the data for each entry is stored as strings in JSON-files.
+
 ## Database structure
 The folders of this repository represent the indices of the subgroups and the subfolders correspond to the genera. Each database entry is labeled by the signature of the
 corresponding subgroup which is of the form (h, g, n<sub>c</sub>, e<sub>2</sub>, e<sub>3</sub>) for which the variables are given by:
@@ -46,26 +48,26 @@ corresponding subgroup which is of the form (h, g, n<sub>c</sub>, e<sub>2</sub>,
 - e<sub>2</sub>: amount of elliptic points of order two
 - e<sub>3</sub>: amount of elliptic points of order three
 
-Each database entry contains the following information (for more background on the notation, please checkout *(add link to paper here once available)*):
+Each database entry contains the following information (for more background on the notation, please checkout [arXiv:2207.13365](https://arxiv.org/abs/2207.13365)):
 ```
 ├── G: Instance of subgroup representative as a Sage subgroup
-├── Kv: Basefield of curve with specified embedding
+├── monodromy_group: Description of the monodromy group of G
+├── K: Basefield of curve with specified embedding
 ├── v: Generator of v as an element of QQbar
 ├── u: u as an element of QQbar
 ├── u_str: Expression of u in terms of v as a string
 ├── curve: Expression of the curve
+├── embeddings: Embeddings of the passport
 └── q_expansions
     └── weight: weight of the considered space of modular forms
-        ├── hauptmodul_raw: q-expansion of the hauptmodul with coefficients defined over a numberfield
-        ├── hauptmodul_pretty: q-expansion of the hauptmodul with coefficients factored conveniently
-        ├── hauptmodul_float: q-expansion of the hauptmodul with coefficients given as floating point numbers with rigorous error bounds
-        ├── modforms_raw: list of q-expansions of modular forms with coefficients defined over a numberfield
-        ├── modforms_pretty: list of q-expansions of modular forms with coefficients defined over a numberfield with coefficients factored conveniently
-        ├── modforms_float: list of q-expansions of modular forms with coefficients defined over a numberfield with coefficients given as floating point numbers with rigorous error bounds
-        ├── cuspforms_raw: list of q-expansions of cuspforms with coefficients defined over a numberfield
-        ├── cuspforms_pretty: list of q-expansions of cuspforms with coefficients defined over a numberfield with coefficients factored conveniently
-        ├── cuspforms_float: list of q-expansions of cuspforms with coefficients defined over a numberfield with coefficients given as floating point numbers with rigorous error bounds
-        └── eisenstein_basis_factors: list of floating point expressions that create the space of cuspforms
+        ├── hauptmodul_raw: q-expansion of the hauptmodul with coefficients defined over numberfield L
+        ├── hauptmodul_pretty: q-expansion of the hauptmodul with coefficients factored conveniently in K and u
+        ├── modforms_raw: list of q-expansions of modular forms with coefficients defined over numberfield L
+        ├── modforms_pretty: list of q-expansions of modular forms with coefficients defined over a numberfield with coefficients factored conveniently in K and u
+        ├── cuspforms_raw: list of q-expansions of cuspforms with coefficients defined over numberfield L
+        ├── cuspforms_pretty: list of q-expansions of cuspforms with coefficients defined over a numberfield with coefficients factored conveniently in K and u
+        ├── eisenstein_basis_factors: list of floating point expressions that create the space of Eisenstein series in reduced row echelon form
+        └── eisenstein_canonical_normalizations: list of floating point expressions that create the space of Eisenstein series in a canonical normalization
 ```
 ## Reliability of the results
 For genus zero, all coefficients have been computed using rigorous arithmetic over numberfields or rigorous interval arithmetic. The only exception are the Eisenstein series whose precision we can only estimate heuristically.
