@@ -165,7 +165,7 @@ sage: eisforms_canonical[0].O(5)
 ```
 Interestingly, all of these coefficients seem to be non-algebraic!
 
-#### Embeddings
+#### embeddings
 The embeddings for this passport are given by:
 ```python
 sage: res["embeddings"]
@@ -178,7 +178,7 @@ sage: res["embeddings"]
 ```
 where the keys denote the corresponding permutation triples and the values denote the corresponding embeddings of `K`.
 
-#### Curve
+#### curve
 Because `G` is a genus zero subgroup, we return the Belyi map defined over `L`
 ```python
 sage: res["curve"]
