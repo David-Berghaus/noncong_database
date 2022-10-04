@@ -48,7 +48,7 @@ corresponding subgroup which is of the form (h, g, n<sub>c</sub>, e<sub>2</sub>,
 - e<sub>2</sub>: amount of elliptic points of order two
 - e<sub>3</sub>: amount of elliptic points of order three
 
-Each database entry contains the following information (for more background on the notation, please checkout [arXiv:2207.13365](https://arxiv.org/abs/2207.13365)):
+Each database entry contains the following information (for more background on the notation, please checkout [arXiv:2207.13365](https://arxiv.org/abs/2207.13365) and have a look at the examples below):
 ```
 ├── G: Instance of subgroup representative as a Sage subgroup
 ├── monodromy_group: Description of the monodromy group of G
@@ -76,21 +76,13 @@ As an additional verification, we have also compared the numerical values of the
 
 ## How to work with the database
 (Maybe put this tutorial into a Jupyter script.)  
-Start a Sage session and load the file "database.sage":
+Start a Sage session and load the corresponding database entry. In this example we consider the passport `7_0_2_1_1_1_a`:
 ```python
-sage: load("database.sage")
+sage: load("7/0/7_0_2_1_1_1_a.sage")
 ```
-### Loading the database
-In this example we would like to load all database elements with `index` 7 and 8:
-```python
-sage: db = load_database(index=[7,8])
-```
-Note that you can also filter for `genus` and `Kv_degree`.
-### Working with database elements
-Let us take a closer look at the first entry of the database:
-```python
-sage: first_el = db[0]
-```
+This runs a script which constructs all the data corresponding to this entry and stores the result in a dictionary called `res`.
+### Database elements
+Let us take a closer look at the values that `res` contains:
 #### G
 This database entry corresponds to the subgroup `G`:
 ```python
