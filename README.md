@@ -29,11 +29,11 @@ and all modular forms and cuspforms up to and including weight 6. We also includ
 | 12 | 2/3 |
 | 13 | 1/1 |
 | 14 | 1/2 |
-| 15 | 6/9 |
+| 15 | 7/9 |
 | 16 | 7/9 |
 | 17 | 1/2 |
 
-The database currently contains 20 representatives of genus one noncongruence subgroups. For each of these subgroups we have computed q-expansions of all modular forms and cuspforms up to and including weight 6. We also include numerical expressions to construct the spaces of Eisenstein series to around 1500 digits precision.
+The database currently contains 21 representatives of genus one noncongruence subgroups. For each of these subgroups we have computed q-expansions of all modular forms and cuspforms up to and including weight 6. We also include numerical expressions to construct the spaces of Eisenstein series to around 1500 digits precision.
 
 ## Requirements
 The database can be loaded by running [Sage](https://www.sagemath.org/) scripts that were generated for the syntax of Sage version 9.2 (and hopefully work for the versions that are yet to be released as well). Additionally, the data for each entry is stored as strings in JSON-files.
