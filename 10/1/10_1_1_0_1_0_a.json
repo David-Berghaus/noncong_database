@@ -3,7 +3,7 @@
     "monodromy_group": "A6 : C2",
     "Kv": "Number Field in v with defining polynomial x - 1",
     "u": "-1.37754626948290? - 0.44759191542716?*I",
-    "u_str": "(800000/19683)^(1/10)",
+    "u_str": "(-800000/19683)^(1/10)",
     "curve": "Elliptic Curve defined by y^2 + x*y + y = x^3 + x^2 - 110*x - 880 over Rational Field",
     "q_expansions": {
         "2": {
@@ -27,6 +27,6 @@
         "('(1 10)(2 5)(3 7)(4 8)(6 9)', '(1)(2 6 10)(3 8 5)(4 9 7)', '(1 2 3 4 5 6 7 8 9 10)')": "1"
     },
     "v_Kw": "1",
-    "u_interior_Kv": "800000/19683",
+    "u_interior_Kv": "-800000/19683",
     "L": "Number Field in w with defining polynomial 19683*x^10 + 800000 with w = -1.377546269482900? - 0.4475919154271570?*I"
 }
