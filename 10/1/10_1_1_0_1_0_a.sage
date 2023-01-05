@@ -41,12 +41,12 @@ P.<T> = PolynomialRing(QQ)
 K.<v> = NumberField(P([-1, 1]),embedding=1.00000000000000+0.000000000000000*1j)
 res["K"] = K
 res["v"] = K.gen()
-u_interior_K = 800000/19683
+u_interior_K = -800000/19683
 L.<w> = NumberField(P([800000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19683]),embedding=-1.37754626948290+-0.447591915427157*1j) #Base ring of the q-expansions in raw format
 v_L = 1
 
 # The pretty form of q-expansions involves powers of u, where u is given by
-u_str = "(800000/19683)^(1/10)"
+u_str = "(-800000/19683)^(1/10)"
 res["u_str"] = u_str
 # With embedding
 res["u"] = QQbar(L.gen())
