@@ -1,4 +1,7 @@
 # Database of modular forms of Noncongruence Subgroups of PSL(2,&#8484;)
+
+This repository hosts the data associated to: https://arxiv.org/abs/2301.02135
+
 ## Development status
 ### Genus zero
 
