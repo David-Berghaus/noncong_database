@@ -1,5 +1,6 @@
 {
     "G": "Arithmetic subgroup with permutations of right cosets\n S2=(1,4)(3,7)(5,10)(6,12)(8,13)(9,15)(11,14)\n S3=(1,2,3)(4,5,6)(7,8,9)(10,11,12)(13,14,15)\n L=(1,7,15,11,5)(2,4,12,14,8,3)(6,10)(9,13)\n R=(1,2,7,13,11,6)(3,4,10,14,9)(5,12)(8,15)",
+    "is_congruence": false,
     "monodromy_group": "(A5 x A5 x A5) : S3",
     "Kv": "Number Field in v with defining polynomial x - 1",
     "u": "-0.4184898139810232? + 0.3040506473942658?*I",
