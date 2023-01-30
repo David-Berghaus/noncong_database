@@ -35,6 +35,7 @@ def transform_u_v_factored_q_expansion_to_L(q_expansion, L, v_L, u_interior_K, p
 
 res = {} #The dictionary in which we store the results
 res["G"] = ArithmeticSubgroup_Permutation(S2="(1,4)(2,5)(3,8)(6,11)(7,9)(10,13)(12,14)",S3="(1,2,3)(5,6,7)(8,9,10)(11,12,13)")
+res["is_congruence"] = False
 principal_cusp_width = 8
 res["monodromy_group"] = "(C2 x C2 x C2 x C2 x C2 x C2) : S7"
 P.<T> = PolynomialRing(QQ)
