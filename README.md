@@ -78,9 +78,9 @@ As an additional verification, we have also compared the numerical values of the
 
 ## How to work with the database
 (Maybe put this tutorial into a Jupyter script.)  
-Start a Sage session and load the corresponding database entry. In this example we consider the passport `7_0_2_1_1_0_a`:
+Start a Sage session and load the corresponding database entry. In this example we consider the passport `7T4-6.1_3.3.1_2.2.2.1-a`:
 ```python
-sage: load("7/0/7_0_2_1_1_0_a.sage")
+sage: load("7/0/7T4-6.1_3.3.1_2.2.2.1-a.sage")
 ```
 This runs a script which constructs all the data corresponding to this entry and stores the result in a dictionary called `res`.
 ### Database elements
